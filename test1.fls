@@ -1,0 +1,19 @@
+"Hello!"
+10,
+"Type a character: "^a:10,a;$," ="32,.10,
+{comment`}
+[$1=~[$1-F;!*]?]F:
+5$F;!
+\"Factorial of "." is: ".10,
+"Break "["test " ` "Failed"]!"completed."10,
+25_n:
+5_ 4_ 3_ 2_ 1_ 0 1 2 3 4 5 6 7 8 9 10
+10 1+$(n:[n;1-$n:0>][.32,®]#30B:1a:)10,.32,.32,.10,
+n;.32,  {n should still be -25}
+100A:A;.32,
+B;.32,  {30}
+a;.10,     {whatever character you typed}
+® [{just putting this here to see what happens}]$,
+%2<@aF;`
+{Remove the '$' after the previous comment function 2 lines above to see an error message}
+This should not be here, but doesn't hurt anything!
