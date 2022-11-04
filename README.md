@@ -1,11 +1,8 @@
 # Falsish
 A False variant inspired by fish >&lt;>
-
-Copyright (C) 2022 McChuck
-
-Released under GNU General Public License
-
-See LICENSE for more details.
+    Copyright (C) 2022 McChuck
+    Released under GNU General Public License
+    See LICENSE for more details.
 
 This is a False-like language, with an interpreter written in Python.
 
