@@ -21,6 +21,9 @@ This is a False-like language, with an interpreter written in Python.
 *   ')' closes the higher level stack and moves and stack elements back onto the next lower level.  It also removes the higher local (lowercase) variable array.
 *   '®' reverses the elements of the top data stack.  Find it online and copy it.  U+00AE
 
-For more information on False, see
+For more information of Falsish, see:
+* https://esolangs.org/wiki/Falsish
+
+For more information on False, see:
 * https://esolangs.org/wiki/FALSE
 * https://strlen.com/false-language/
