@@ -17,9 +17,9 @@ This is a False-like language, with an interpreter written in Python.
 * Uppercase letters (A..Z) are global variables.
 * '(' and ')' create and drop a new data stack and local variable array.  Inspired by the fish ><> esolang.
 *   N '(' moves the top N elements of the stack to the new stack being created.  It also creates a new local (lowercase) variable array.
-*   ')' closes the higher level stack and moves and stack elements back onto the next lower level.  It also removes the higher local (lowercase) variable array.
-*   '®' reverses the elements of the top data stack.  Find it online and copy it.  U+00AE
-* '<' pushes an element deep into the stack (the opposite of ø).  1 2 3 4 5 A 2 <  -->   1 2 3 A 4 5
+* ')' closes the higher level stack and moves and stack elements back onto the next lower level.  It also removes the higher local (lowercase) variable array.
+* '®' reverses the elements of the top data stack.  Find it online and copy it.  U+00AE
+* '©' pushes an element deep into the stack (the opposite of ø).  1 2 3 4 5 A 2 <  -->   1 2 3 A 4 5
 
 For more information of Falsish, see:
 * https://esolangs.org/wiki/Falsish
