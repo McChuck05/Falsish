@@ -14,6 +14,6 @@ n;.32,  {n should still be -25}
 B;.32,  {30}
 a;.10,     {whatever character you typed}
 ® [{just putting this here to see what happens}]$,
-%2<@aF;`
+%2ø@aF;`
 {Remove the '$' after the previous comment function 2 lines above to see an error message}
 This should not be here, but doesn't hurt anything!
