@@ -208,7 +208,7 @@ def parse(mem):
                     print("\n\nError: Attempt to pick:", deep, "< deeper than stack height", flush=True)
                     raise IndexError
 
-            elif char == ',':       # PUSH       # 0 is the top of stack after getting the depth and the item
+            elif char == '©':       # PUSH       # 0 is the top of stack after getting the depth and the item
                 deep = pop(0)
                 temp1 = pop(0)
                 if len(data[-1]) > deep:
