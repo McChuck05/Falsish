@@ -17,6 +17,7 @@ Falsish is a superset of FALSE with the following changes:
 * '©' pushes the top element of the stack N elements in. Sort of the opposite of 'ø'. Example: 1 2 3 4 5 a 2 < --> 1 2 3 a 4 5
 * '™' pops an element N deep in the stack, like a destructive 'ø'. Example: 1 2 3 4 5 3 --> 1 3 4 5 2
 * '‡' clears the current stack.
+* '¿' if else
 * Useful (sort of) error messages are introduced.
 * Note that, with the exception of the ` assembly command, existing FALSE programs will run in Falsish.
 
