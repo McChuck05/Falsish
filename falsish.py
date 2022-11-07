@@ -121,6 +121,25 @@ def parse(mem):
                     else:
                         print("\n\nError: ? expected lambda: ", to_exec)
                         raise ValueError
+                        
+            elif char == '¿':                         #   IF ELSE
+                to_exec_false = pop(0)
+                to_exec_true = pop(0)
+                condition = pop(0)
+                if condition != 0:
+                    if to_exec_true[0] == '[' and to_exec_true[-1] == ']':
+                        to_exec_true = to_exec_true[1:-1]     # strip off brackets to avoid recursion error
+                        parse(to_exec_true)
+                    else:
+                        print("\n\nError: ¿ True expected [lambda]: ", to_exec)
+                        raise ValueError
+                else:
+                    if to_exec_false[0] == '[' and to_exec_false[-1] == ']':
+                        to_exec_false = to_exec_false[1:-1]     # strip off brackets to avoid recursion error
+                        parse(to_exec_false)
+                    else:
+                        print("\n\nError: ¿ False expected [lambda]: ", to_exec)
+                        raise ValueError
 
             elif char == '#':                         #   WHILE
                 to_exec = pop(0)
