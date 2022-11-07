@@ -1,11 +1,7 @@
 # Falsish
-A False variant inspired by fish >&lt;>
+A FALSE variant inspired by fish >&lt;>
 
-Copyright (C) 2022 McChuck
-
-Released under GNU General Public License
-
-See LICENSE for more details.
+Copyright (C) 2022 McChuck.  Released under GNU General Public License.  See LICENSE for more details.
 
 Falsish is a superset of FALSE with the following changes:
 
@@ -24,7 +20,7 @@ Falsish is a superset of FALSE with the following changes:
 * Useful (sort of) error messages are introduced.
 * Note that, with the exception of the ` assembly command, existing FALSE programs will run in Falsish.
 
-Falsish, although completely functional, is still a work in progress.
+Falsish, although completely functional, is still a work in progress.  With the addition of the stack reversal function, Falsish is a Turing complete language.  A reversible stack is a deque, or conceptually two separate stacks with shared elements.
 
 For more information of Falsish, see:
 * https://esolangs.org/wiki/Falsish
