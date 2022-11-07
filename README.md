@@ -7,19 +7,24 @@ Released under GNU General Public License
 
 See LICENSE for more details.
 
-This is a False-like language, with an interpreter written in Python.
+Falsish is a superset of FALSE with the following changes:
 
-* Keyboard and display flushing is done automatically.
-* Assembly programming is omitted.
-* ',' will print a number as a character.  It will also print variable names and lambda functions.
-* '`' is used as a break.  It will halt the current lambda function level.
-* Lowercase letters (a..z) are local variables.
-* Uppercase letters (A..Z) are global variables.
-* '(' and ')' create and drop a new data stack and local variable array.  Inspired by the fish ><> esolang.
-*   N '(' moves the top N elements of the stack to the new stack being created.  It also creates a new local (lowercase) variable array.
-* ')' closes the higher level stack and moves and stack elements back onto the next lower level.  It also removes the higher local (lowercase) variable array.
-* '®' reverses the elements of the top data stack.  Find it online and copy it.  U+00AE
-* '©' pushes an element deep into the stack (the opposite of ø).  1 2 3 4 5 A 2 <  -->   1 2 3 A 4 5
+* Input and output flushing is automatic.
+* Assembly functionality is omitted.
+* The '`' (back quote) character executes a break, exiting out of a lambda function or the program.
+* ',' in addition to printing a number as a character, will also print a variable name or lambda function.
+* Lowercase letters are local variables, specific to a data stack.
+* Uppercase letters are global variables.
+* You add a stack by using 'N(', where N is the number of items from the current stack to populate onto the new stack.
+* You close a stack by using ')', which moves the remaining items onto the lower stack.
+* '®' reverses the current stack, effectively making it a deque or two stacks.
+* '©' pushes the top element of the stack N elements in. Sort of the opposite of 'ø'. Example: 1 2 3 4 5 a 2 < --> 1 2 3 a 4 5
+* '™' pops an element N deep in the stack, like a destructive 'ø'. Example: 1 2 3 4 5 3 --> 1 3 4 5 2
+* '‡' clears the current stack.
+* Useful (sort of) error messages are introduced.
+* Note that, with the exception of the ` assembly command, existing FALSE programs will run in Falsish.
+
+Falsish, although completely functional, is still a work in progress.
 
 For more information of Falsish, see:
 * https://esolangs.org/wiki/Falsish
