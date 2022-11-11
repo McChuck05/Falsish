@@ -1,0 +1,57 @@
+Falsish commands
+Symbol          Effect
+
+whitespace      nothing
+123             integer
+a..z            local variables
+A..Z            global variables
+{..}            comment
+[..]            lambda function (quotation)
+(               add a stack,         n(
+                    move n elements from lower stack into it,
+                    create new local variables a..z,
+                    copy the new stack elements to local variables a..
+)               remove the top stack and local variables,
+                    move dropped stack elements onto lower stack
+".."            print string
+'a              convert a to ascii
+<name           named variable        *MUST* end with whitespace!
+                    first character must be a letter and determines if local (lowercase) or global (uppercase)
+                    to create a variable, put its initial contents on the stack, then:  <"name"       *MUST* end in whitespace!
+                    to use a variable, use: <name : or <Name ;
+                    if the variable name ends in '!', it will execute its contents instead of being pushed onto the stack
+                        the contents to be executed MUST be a lambda quotation!
+^               imput char -> ascii
+.               print number
+,               print char/var/lambda
+ß               flush buffer (not needed)
+!               execute function
+`               break from current function (or program, if at lowest level)
+:               store to variable
+;               fetch from variable
+?               if          bool [true]?
+¿               if-else     bool [true][false]¿
+#               while       [bool][true]#
+¶               break from most recent while loop (but not the current function)
+$               DUP     a b c --> a b c c
+%               DROP    a b c --> a b
+\               SWAP    a b c --> a c b
+@               ROT     a b c --> b c a
+ø               PICK    a b c d 2 --> a b c d b
+©               PUT     a b c d 2 --> a d b c
+™               ROLL    a b c d 2 --> a c d b
+£               OVER    a b c --> a b c b
+®               reverse stack   a b c d --> d c b a
+§               push the stack depth    a b c --> a b c 3
+‡               clear the current stack     a b c -->
+>               greater than? (0 = false)
+=               equal? (-1 = true)
+&               bitwise AND
+|               bitwise OR
+~               bitwise not
+_               negate  1_  -->  -1
++               plus
+-               minus 3 2 -  -->  1
+*               times
+/               division (integer)  4 2 / -->  2
+

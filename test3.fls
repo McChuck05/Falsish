@@ -1,0 +1,12 @@
+["Happy birthday!"] <"Birthday_greeting"
+<Birthday_greeting ;$,10,!
+10,
+["Good morning, sunshine!  The earth says 'Hello!'"]
+<"salutation!"
+<salutation!
+{ What happens? } 10,
+["Greetings!"]<"salutation!"
+<salutation! 10,
+42 <"Star!"   { * }
+<Star! $,
+
