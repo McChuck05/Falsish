@@ -12,7 +12,7 @@ Falsish is a superset of FALSE with the following changes:
 * Lowercase letters are local variables, specific to a data stack.
 * Uppercase letters are global variables.
 * You add a stack by using 'N(', where N is the number of items from the current stack to populate onto the new stack.
-** This will also copy each of the new stack elements into the local variables, starting with a.
+*     This will also copy each of the new stack elements into the local variables, starting with a.
 * You close a stack by using ')', which moves the remaining items onto the lower stack.
 * '®' reverses the current stack, effectively making it a deque or two stacks.
 * '©' pushes the top element of the stack N elements in. Sort of the opposite of 'ø'. Example: 1 2 3 4 5 a 2 < --> 1 2 3 a 4 5
