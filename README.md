@@ -24,9 +24,9 @@ Falsish is a superset of FALSE with the following changes:
 * Useful (sort of) error messages are introduced.
 * Note that, with the exception of the ` assembly command, existing FALSE programs will run in Falsish.
 * You can create your own variables with: value <"name"     *MUST* end in whitespace!  MUST begin with a letter!
-      If the first letter is uppercase, the variable is global.  If lowercase, local.
-      To use: <name :   or <Name ;  like any single letter variable.
-      If the name ends in '!', it will execute instead of having its name pushed to the stack.
+            If the first letter is uppercase, the variable is global.  If lowercase, local.
+            To use: <name :   or <Name ;  like any single letter variable.
+            If the name ends in '!', it will execute instead of having its name pushed to the stack.
 
 Falsish, although completely functional, is still a work in progress.  With the addition of the stack reversal function, Falsish is a Turing complete language.  A reversible stack is a deque, or conceptually two separate stacks with shared elements.
 
