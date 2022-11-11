@@ -20,6 +20,7 @@ Falsish is a superset of FALSE with the following changes:
 * '‡' clears the current stack.  Example:  1 2 3 ‡ --> 
 * '§' push the stack depth onto the stack.  Example:  1 2 3 § --> 1 2 3 3
 * '¿' if else
+* '¶' breaks from most recent while loop (but not the current lambda function).
 * Useful (sort of) error messages are introduced.
 * Note that, with the exception of the ` assembly command, existing FALSE programs will run in Falsish.
 
