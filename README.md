@@ -3,6 +3,8 @@ A FALSE variant inspired by fish >&lt;>
 
 Copyright (C) 2022 McChuck.  Released under GNU General Public License.  See LICENSE for more details.
 
+Use: python falsish.py filename.fls [-d/-diag]  {allows diagnostic display of state when program ends}
+
 Falsish is a superset of FALSE with the following changes:
 
 * Input and output flushing is automatic.
