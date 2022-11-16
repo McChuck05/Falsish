@@ -5,7 +5,7 @@ Copyright (C) 2022 McChuck.  Released under GNU General Public License.  See LIC
 
 Use: python falsish.py filename.fls [-d/-diag]  {allows diagnostic display of state when program ends}
 
-Falsish is a superset of FALSE.  The following is a partial list of changes.  Read "Falsish commands.txt" to see the full command list.  Note that, with the exception of the ` (68k assembly) command, existing FALSE programs will run in Falsish.
+Falsish is a superset of FALSE.  The following is a partial list of changes.  Read "falsish command list.txt" to see the full command list.  Note that, with the exception of the ` (68k assembly) command, existing FALSE programs will run in Falsish.
 
 * Input and output flushing is automatic.
 * Assembly functionality is omitted.
