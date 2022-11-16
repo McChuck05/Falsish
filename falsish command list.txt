@@ -1,57 +1,71 @@
 Falsish commands
-Symbol          Effect
+Symbol      Effect
 
-whitespace      nothing
-123             integer
-a..z            local variables
-A..Z            global variables
-{..}            comment
-[..]            lambda function (quotation)
-(               add a stack,         n(
-                    move n elements from lower stack into it,
-                    create new local variables a..z,
-                    copy the new stack elements to local variables a..
-)               remove the top stack and local variables,
-                    move dropped stack elements onto lower stack
-".."            print string
-'a              convert a to ascii
-<name           named variable        *MUST* end with whitespace!
-                    first character must be a letter and determines if local (lowercase) or global (uppercase)
-                    to create a variable, put its initial contents on the stack, then:  <"name"       *MUST* end in whitespace!
-                    to use a variable, use: <name : or <Name ;
-                    if the variable name ends in '!', it will execute its contents instead of being pushed onto the stack
-                        the contents to be executed MUST be a lambda quotation!
-^               imput char -> ascii
-.               print number
-,               print char/var/lambda
-ß               flush buffer (not needed)
-!               execute function
-`               break from current function (or program, if at lowest level)
-:               store to variable
-;               fetch from variable
-?               if          bool [true]?
-¿               if-else     bool [true][false]¿
-#               while       [bool][true]#
-¶               break from most recent while loop (but not the current function)
-$               DUP     a b c --> a b c c
-%               DROP    a b c --> a b
-\               SWAP    a b c --> a c b
-@               ROT     a b c --> b c a
-ø               PICK    a b c d 2 --> a b c d b
-©               PUT     a b c d 2 --> a d b c
-™               ROLL    a b c d 2 --> a c d b
-£               OVER    a b c --> a b c b
-®               reverse stack   a b c d --> d c b a
-§               push the stack depth    a b c --> a b c 3
-‡               clear the current stack     a b c -->
->               greater than? (0 = false)
-=               equal? (-1 = true)
-&               bitwise AND
-|               bitwise OR
-~               bitwise not
-_               negate  1_  -->  -1
-+               plus
--               minus 3 2 -  -->  1
-*               times
-/               division (integer)  4 2 / -->  2
-
+`           ALT - see indented form of instruction
+    ``      HALT
+            (whitespace) nothing
+    `       (alt-whitespace) break from current function (or program, if at lowest level)
+123         integer
+    `12.3   float
+a..z        local variables
+A..Z        global variables
+{..}        comment
+    `{      unpack string -> stack
+    `}      pack stack -> string
+[..]            lambda function (quotation) - execute with "!"
+    `[      quote string -> lambda
+    `]      unquote lambda -> string
+N(          create a new stack, move N elements from lower stack into it,
+                make the new stack the current stack,
+                create new local variables a..z,
+                copy the new stack elements to local variables a..
+                ex:  1 2 3 4 5 2( --> 4 5   a=4, b=5
+)           remove the top stack and local variables,
+                move dropped stack elements onto lower stack
+".."        print string
+    `".."   push string to stack
+'a          convert the following character to ascii.  ex:  'A --> 65
+<           named variable        *MUST* end with whitespace!
+                first character must be a letter and determines if local (lowercase) or global (uppercase)
+                to create a variable, put its initial contents on the stack, then:  <"name"       *MUST* end in whitespace!
+                to use a variable, use: <name : or <Name ;
+                if the variable name ends in '!', it will execute its contents instead of being pushed onto the stack
+                    the contents to be executed MUST be a lambda quotation!
+^           input char -> ascii
+    `^      input string
+.           print number
+,           print string/lambda/variable name; number --> ascii char  ex: "10," is new line; "32," is space
+ß           flush buffer (not needed)
+    `ß      convert all string numbers in current stack to numbers.  ex:  a '12' b 34 --> a 12 b 34
+!           execute function
+:           store to variable
+;           fetch from variable
+?           IF          bool [true]?
+¿           IF-ELSE     bool [true][false]¿
+#           WHILE       [bool][true]#
+¶           break from most recent while loop (but not the current function)
+$           DUP     a b c --> a b c c
+%           DROP    a b c --> a b
+\           SWAP    a b c --> a c b
+@           ROT     a b c --> b c a
+ø           PICK    a b c d 2 --> a b c d b
+©           PUT     a b c d 2 --> a d b c
+™           ROLL    a b c d 2 --> a c d b
+£           OVER    a b c --> a b c b
+®           reverse stack   a b c d --> d c b a
+    `®      reverse string (numbers are left alone)
+§           push the stack depth    a b c --> a b c 3
+    `§      push the length of the top element (number = 0)
+‡           clear the current stack     a b c -->
+    `‡      print the stack
+>           greater than? (0 = false)
+=           equal? (-1 = true)
+&           bitwise AND
+|           bitwise OR
+~           bitwise not
+_           negate  1_  -->  -1
++           plus
+-           minus 3 2 -  -->  1
+*           times
+/           division (integer)  3 2 / -->  1        4.0 1.0 / --> 4
+    `/      division (float)    3 2 `/ --> 1.5      4 1 `/ --> 4.0
