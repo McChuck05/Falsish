@@ -31,3 +31,5 @@ For more information of Falsish, see:
 For more information on False, see:
 * https://esolangs.org/wiki/FALSE
 * https://strlen.com/false-language/
+
+Falsish was the direct inspiration for the much more advanced language Listack, written originally in Python and now in Nim.
